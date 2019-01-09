@@ -1,0 +1,78 @@
+			.container {
+				background-color: blue
+			}
+			.learning-by-doing {
+				background-color: white;
+				height: 30px;
+				font-size: .9em;
+				border-bottom: 15px solid transparent;
+				border-left: 15px solid blue;
+				border-top:15px solid transparent;
+			}
+			.border {
+				border-bottom: 15px solid transparent;
+				border-left: 15px solid white;
+				border-top:15px solid transparent;	
+			}
+			.column{
+				border :3px solid blue;
+			}
+			.border1 {
+				background-color: #87CEEB;
+			}
+			.border2 {
+				padding: 40px;
+				background-color: white;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 30px;
+				margin-bottom: 30px;
+				border:1px solid gray;
+				/*height: 650px;*/
+				width: 1100px;
+			}
+			.hint1 {
+				margin-bottom: 3px;
+				border:1.5px solid blue;
+			}
+			.hint2 {
+				margin-top: 5px;
+				border:1.5px solid blue;
+			}
+			.opt1 {
+				margin-top: 5px;
+				border:1.5px solid red;
+			}
+			.opt2 {
+				margin-top: 5px;
+				border:1.5px solid green;
+			}
+			.opt3 {
+				margin-top: 5px;
+				border:1.5px solid green;
+			}
+			.opt4 {
+				margin-bottom: 3px;
+				border:1.5px solid red;
+			}
+			.speech-bubble {
+				position: relative;
+				background: #00aabb;
+				border-radius: .4em;
+				width: 50px;
+			}
+
+			.speech-bubble:after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				width: 0;
+				height: 0;
+				border: 20px solid transparent;
+				border-top-color: #00aabb;
+				border-bottom: 0;
+				border-left: 0;
+				margin-left: -10px;
+				margin-bottom: -20px;
+			}
