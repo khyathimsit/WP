@@ -1,0 +1,70 @@
+.container {
+			border:1px solid green;
+		}
+
+		.border1 {
+			border:1px solid green;
+		}
+
+		.responsive {
+  			width: 100%;
+  			height: auto;
+		}
+		#image {
+			border-radius: 50%;
+			height:180px;
+			float: center;
+		}
+
+		#name {
+			text-align: center;
+
+		}
+		.border2 {
+			border:1px solid green;
+			text-align: center;
+			
+		}
+		#text {
+			text-align: left;
+			font-size: 14px;
+
+		}
+		.alignment {
+			padding: 20px;
+			margin-left: auto;
+			margin-top: auto;
+			margin-bottom: auto;
+			margin-right: auto;
+		}
+		.cspp {
+			margin-left: 12px;
+			border: 2px solid green;
+
+		}
+
+		.ads {
+			margin-left: 12px;
+			border: 2px solid green;
+		}
+
+		.dbms {
+			
+			border: 2px solid green;
+		}
+
+		.cnf {
+			margin-left: 12px;
+			border: 2px solid green;
+		}
+
+		.cs {
+			margin-left: 12px;
+			border: 2px solid green;
+		}
+
+		.ics {
+			
+			border: 2px solid green;
+		}
+		

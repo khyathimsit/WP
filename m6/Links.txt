@@ -1,0 +1,9 @@
+https://www.w3schools.com/howto/howto_css_image_responsive.asp
+
+https://www.w3schools.com/howto/howto_css_rounded_images.asp
+
+https://getbootstrap.com/docs/4.1/components/card/
+
+https://www.w3schools.com/css/css_float.asp
+
+https://www.w3schools.com/cssref/pr_pos_overflow.asp
