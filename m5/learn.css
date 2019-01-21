@@ -1,0 +1,23 @@
+.nav {
+	background-color: #1486be;
+	min-height: 20px;
+	margin-top: 0px;
+	display: flex;
+}
+
+#maintitle {
+	font-size: 30px;
+	color: black;
+	background-color: white;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-left: 70px;
+	margin-top: 7px;
+	margin-bottom: 7px;
+}
+
+#pagebackground {
+	background-color: #e3f2fc;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
