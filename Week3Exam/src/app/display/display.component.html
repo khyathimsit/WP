@@ -1,0 +1,45 @@
+<style>
+    table, th, td {
+      border: 1px solid black;
+    }
+</style>
+<div class="container">
+    <button  type="button" (click) = "display()" class = "btn">Display</button><br>
+    <br>
+    <table style="width:100%">
+        <tr>
+            <th>Title</th>
+                <th>Description</th>
+                    <th>Image</th>
+                        <th>Quantity</th>
+        </tr>
+        <tr *ngFor="let i of product">
+            <td>{{i.title}}</td>
+                <td>{{i.description}}</td>
+                    <td><img src = "assets\Images\2.jpeg" width="80" height="120"></td>
+                       <td>{{i.quantity}}</td>
+                       <th><button  type="button" (click) = "delete(i)">Delete</button></th>
+                       <th><button  type="button">Edit</button></th>
+        </tr>
+    </table>
+</div>
+<br>
+<br>
+    
+
+  <form class="form-group" (click) = "edit()">
+    <label for ="title">Title</label>
+    <input type="text" class="form-control" [ngModelOptions]="{standalone: true}" [ngModel] = "title1">
+    
+    <label for ="description">Description</label>
+    <input type="text" class="form-control" [ngModelOptions]="{standalone: true}" [ngModel] = "description1">
+
+    <label for ="title">Image</label>
+    <input type="img" class="form-control" [ngModelOptions]="{standalone: true}" [ngModel] = "image1">
+
+    <label for ="title">Quantity</label>
+    <input type="text" class="form-control" [ngModelOptions]="{standalone: true}" [ngModel] = "quantity1"><br>
+    <button  type="button">Submit</button>
+
+  </form>
+
