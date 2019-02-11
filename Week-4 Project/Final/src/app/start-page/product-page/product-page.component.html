@@ -1,0 +1,81 @@
+<div class = "row">
+  <app-topnavbar-page></app-topnavbar-page>
+</div>
+<div class="container ">
+  <div class="row">
+
+    <div class="col-md-3 irRc">
+      <div class="image">
+        <img src="{{item?.imageurl}}" alt = "Image Not Found">
+      </div><br>
+      <div>
+        <p class="ratings">User Ratings : <strong class="ratingColor">3.5/5.0</strong></p>
+        <span class="comments"><input type="button" href="#" class="btn btn-warning" value="Comment" (click) = "comment()"></span>
+        <!-- <span class="reviews"><input type="button" href="#" class="btn btn-primary" value="Ratings" (click) = "rating()"></span> -->
+      </div> <br>
+
+      <!-- <div * ngFor = ""> -->
+
+      <!-- </div> -->
+      
+      <div *ngIf="commentCheck" class="commentDisplay" [style.display]="hiddenCheck">
+        <textarea [(ngModel)] = "com" class="commentArea" placeholder="Comment here..." rows="5" cols="30"></textarea> <br>
+        <input type="button" class="btn btn-primary" value="Post Comment" (click) = "postComment()" [style.display]="hiddenCheck">
+      </div>
+
+      <div *ngIf="ratingCheck" class="ratingDisplay" [style.display]="isHide">
+        <fieldset class="rating">
+          <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars" (click) = "ratingValue(5)"></label>
+          <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars" (click) = "ratingValue(4.5)" ></label>
+          <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars" (click) = "ratingValue(4)" ></label>
+          <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars" (click) = "ratingValue(3.5)" ></label>
+          <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars" (click) = "ratingValue(3)" ></label>
+          <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars" (click) = "ratingValue(2.5)" ></label>
+          <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars" (click) = "ratingValue(2)" ></label>
+          <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars" (click) = "ratingValue(1.5)" ></label>
+          <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star" (click) = "ratingValue(1)" ></label>
+          <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars" (click) = "ratingValue(0.5)" ></label>
+      </fieldset>
+      <input type="button" class="btn btn-link" value="Submit Rating" (click) = "postRating()" [style.display]="isHide">
+      </div>
+
+    </div>
+
+    <div class="col-md-9">
+
+      <div class="descriptionGrid">
+          <h1 class="title">{{item.title}}</h1><br>
+          <div class="fullDescription">
+            <h4>Description :</h4>
+            <ul class="descriptionFont">
+                <li >
+                    <span>{{item.longdes}}</span>
+                  </li>
+            </ul>
+            <!-- <h4>Availability :</h4>
+            <ul class="statusCheck">
+              <li >
+                  <span>Only {{item.quantity}} left in the Stock.</span>
+                </li>
+          </ul> -->
+          </div> <br>
+          <h4 class="status">Availability: <span class="statusCheck">Only {{item.quantity}} left in the Stock!</span></h4> <br>
+          <br>
+          <span style = "float:right;"><button class = "btn btn-primary" (click) = "addcart()">Add To Cart<i class="fas fa-shopping-cart"></i></button></span>
+          <h4 class="price">Price:  <span class="priceDisplay">{{item.price}}</span></h4>
+
+        </div>
+
+    </div>
+    
+
+  </div>
+  <br>
+    <h2>COMMENTS:</h2>
+    <hr>
+    <div class = "row" style = "padding:3%;" *ngFor = "let comment of reviews">
+      Comment : {{comment.com}} <br>
+      By : {{comment.username}}
+      <hr>
+    </div>
+</div>

@@ -1,0 +1,62 @@
+
+.mycarticon {
+  float: right;
+  margin-right: 5%;
+}
+
+.grid-container {
+  display: grid;
+  /* background-color: #EAEDED; */
+  grid-template-columns: auto;
+  width: 100%;
+  padding: 1em;
+  /* height: 50em; we need to resize the height after the integration for scroll. */
+  /* overflow-y: scroll; */
+}
+img {
+width: 8em;
+height: 14em;
+}
+h4{
+  font-size: 1em;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.grid-item {
+  /* background-color: #e0e0d1; */
+  /* border: 0.01em solid rgba(0, 0, 0, 0.8); */
+  /* border-bottom: 1em #e6e6ff; */
+  box-shadow: 0.2em 0.2em #e6e6e6;
+  padding: 0.1em;
+  font-size: 1em;
+  margin-top: 5%;
+}
+
+/* .price {
+  float: right;
+} */
+
+.scrollBar {
+width: 100%;
+overflow: scroll;
+}
+
+.rating{
+  font-size: 1.1em;
+  color: black;
+}
+.price {
+  font-size: 1.3em;
+  color: black;
+}
+.description {
+  font-size: 1.3em;
+  color: black;
+}
+.titleDislay {
+  font-size: 1.3em;
+  color: black;
+}
+.ratingDisplay {
+  color: #ffc107;
+  font-size: 1.5em;
+}

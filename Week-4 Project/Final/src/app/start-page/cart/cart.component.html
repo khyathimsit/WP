@@ -1,0 +1,57 @@
+<div class = "row">
+  <app-topnavbar-page></app-topnavbar-page>
+</div>
+<div *ngIf="cartlength">
+  <div class = "image1" style="padding:100px;margin-left:30%"><img src = "data:image/png;base64,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"></div>
+  
+</div>
+   <div class="container" *ngIf = "!cartlength">
+        <table id="cart" class="table table-hover table-condensed">
+          <thead>
+            <tr>
+              <th style="width:42%">Product</th>
+              <th style="width:30%">Price</th>
+              <th style="width:48%">Quantity</th>
+               <!-- <th style="width:22%" class="text-center">Subtotal</th> -->
+              <th style="width:10%"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor = 'let element of arr, index as i'>
+              <td data-th="Product">
+                <div class="row">
+                  <div class="col-sm-4 hidden-xs"><img src = "{{element.imageurl}}" alt = "Image Not Found"></div>
+                  <div class="col-sm-8">
+                    <h4 class="nomargin">{{element.title}}</h4>
+                    <p>{{element.shortdescription}}</p>
+                  </div>
+                </div>
+              </td>
+              <td data-th="Price">{{element.price}}</td>
+              <div class = "row">
+                <div class = "col-md-3">
+                  <button class="btn btn-primary" id= 'minusbutton{{i}}' (click) = "decreasequant(i, element.quantity, element.id);" [disabled]= "minusstatus"> <i class="fas fa-minus" ></i></button>
+                </div>
+                <div class = "col-md-6">
+                    <input id = 'quan{{i}}' style = "size:20%;"type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"  style="text-align: center;">
+                </div>
+                <div class = "col-md-3">
+                  <button class ="btn btn-primary" id="plusbutton{{i}}" (click) = "increasequant(i, element.quantity, element.id);" [disabled] = "plusstatus" style = "float:left;"> <i class="fas fa-plus" ></i></button>
+                </div> 
+            </div>
+              <!-- <td data-th="Subtotal" class="text-center" [(ngModel)] = "subtotal" name = "sub" ngDefaultControl>{{subtotal}}</td> -->
+              <td class="actions" data-th="">
+                <button class="btn btn-danger btn-sm" style = "float:right;" (click) = "removeitem(element.id)">Remove</button>
+              </td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td><a routerLink = '/startpage' class="btn btn-warning" style = "float:left;" name = 'rout'><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
+              <td colspan="" class="hidden-xs"></td>
+              <!-- <td class="hidden-xs text-center" ngDefaultControl>Total:<strong> {{total}}</strong></td> -->
+              <td><a routerLink = '/checkout' class="btn btn-success btn-block">Checkout <i class="fa fa-angle-right"></i></a></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>

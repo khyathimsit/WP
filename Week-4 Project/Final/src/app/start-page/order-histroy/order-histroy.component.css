@@ -1,0 +1,42 @@
+.orderHistory{
+  padding-top: 0.3%;
+}
+.end{
+  border-bottom: dotted 0.1em;
+}
+.orderPlaced {
+  font-size: 0.6em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.total {
+  font-size: 0.6em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.shipTo{
+  font-size: 0.6em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.order{
+  font-size: 0.6em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.datePrint{
+  font-size: 0.6em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: darkgray;
+}
+.pricePrint{
+  font-size: 0.6em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: darkgray;
+}
+.namePrint{
+  font-size: 0.6em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: darkgray;
+}
+.numberPrint{
+  font-size: 0.6em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: darkgray;
+}

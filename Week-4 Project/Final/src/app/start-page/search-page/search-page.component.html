@@ -1,0 +1,49 @@
+<!-- <h1>Product Search Page</h1> -->
+
+<!-- <button (click) = "samp()">Click Me</button> -->
+
+<div class = "row">
+  <app-topnavbar-page></app-topnavbar-page>
+</div>
+<div class="container">
+    <div class="input-group" style = "margin-top:0px;">
+        <input  type="text" class="form-control search_input" [(ngModel)] = "text"  id = "search"  placeholder="search">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>  
+      
+      </div>
+  <!-- <div class='row'>
+      <div class = "row">
+          <div class="input-group searchStyle" style='margin: 25px'>
+              <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+              <div class="input-group-btn">
+                  <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+              </div>
+          </div>
+        </div>
+  </div> -->
+  <div class="row">
+      <!-- | FilterPipe : text; index as i -->
+    <div class="grid-container" >
+      <div class="grid-item"  *ngFor='let element of arr |FilterPipe : text '>
+        <div class="col-md-3 imagediv">
+          <img class="img-responsive" src="{{element.imageurl}}" alt="Image Not Found">
+          </div>
+          <div class="col-md-9">
+            <div class="title"><a routerLink = "/productpage/{{element.id}}" ><h4 class="titleDislay"><strong>{{element.title}}</strong></h4></a></div>
+            <div class="descriptionDiv">
+              <p class="description">{{element.shortdescription}} </p>
+
+            </div>
+            <div class="ratingDiv">
+            <p class="rating">Rating: <Strong class="ratingDisplay">{{element.rating}}</Strong></p>
+
+            </div>
+            <div class="priceDiv">
+                <p class="price">Price: <strong class="priceDisplay">{{element.price}}</strong></p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+ </div>

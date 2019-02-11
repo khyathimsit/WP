@@ -1,0 +1,38 @@
+<div class = "row">
+  <app-topnavbar-page></app-topnavbar-page>
+</div>
+<div class="orderHistory" *ngFor='let element of counter(5); index as i'>
+    <div class="container well">
+        <div class="row">
+          <div class="col-md-4">
+              <div class="orderPlaced"><p>ORDER PLACED</p></div>
+              <div class="dateTime"> <p class="datePrint">06 Febuary 2019.</p></div>
+          </div>
+          <div class="col-md-2">
+            <div class="total"><p>TOTAL</p></div>
+            <div class="price"><p class="pricePrint">Rs.536</p></div>
+          </div>
+          <div class="col-md-3">
+            <div class="shipTo"><p class="shipToPrint">SHIP TO</p></div>
+            <div class="userName"><p class="namePrint">MSIT</p></div>
+          </div>
+          <div class="col-md-3">
+            <div class="order"><p class="orderPrint">ORDER #</p></div>
+            <div class="orderNumber"><p class="numberPrint">541621510515152515</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="container end">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="imagePrint"><img class="img-responsive" src="" alt="No image found"></div>
+          </div>
+          <div class="col-md-8">
+            <div class="title"><p class="titlePrint">Iphone 6S</p></div>
+            <div class="amt"><p class="amtPrint">Rs.536</p></div>
+            <div class="delivered"><span class="deliveryPrint">Delivered on:</span> <span class="dateTimePrint">15 Febuary 2019.</span></div>
+          </div>
+        </div>
+      </div>
+
+</div>

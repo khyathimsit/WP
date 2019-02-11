@@ -1,0 +1,75 @@
+<div class = "row">
+    <app-topnavbar-page></app-topnavbar-page>
+  </div>
+<div class="container">
+    <b><h3 style="text-align: center; color: #317AA3">Register</h3></b>
+        <form [formGroup]="registerForm" method = "POST">
+            <div class="form-group">
+                <label>First Name <i class="fa fa-user" aria-hidden="true"></i></label>
+                <input type="text" name="firstname" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" [(ngModel)] = "firstname_key">
+                <div style ="color: red;" *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                    <div *ngIf="f.firstName.errors.required">**First Name is required</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Last Name <i class="fa fa-user" aria-hidden="true"></i></label>
+                <input type="text" name="lastName" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" [(ngModel)] = "lastname_key">
+                <div style ="color: red;" *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                    <div *ngIf="f.lastName.errors.required">**Last Name is required</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Mobile <i class="fa fa-mobile" aria-hidden="true"></i></label>
+                <input type="number"  name="number" formControlName="number" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.number.errors }" [(ngModel)] = "number_key">
+                <div style ="color: red;" *ngIf="submitted && f.number.errors" class="invalid-feedback">
+                    <div *ngIf="f.number.errors.required">**Number is required</div>
+                    <div *ngIf="f.number.errors.minlength">**Number must be 10 digits</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Email <i class="fa fa-envelope" aria-hidden="true"></i></label>
+                <input type="text"  name="email" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" [(ngModel)] = "email_key">
+                <div style ="color: red;" *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                    <div *ngIf="f.email.errors.required">**Email is required</div>
+                    <div *ngIf="f.email.errors.email">**Email must be a valid email address</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Password <i class="fa fa-key" aria-hidden="true"></i></label>
+                <input type="password" name="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" [(ngModel)] = "password_key">
+                <div style ="color: red;" *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                    <div *ngIf="f.password.errors.required">**Password is required</div>
+                    <div *ngIf="f.password.errors.minlength">**Password must be at least 6 characters</div>
+                </div>
+            </div>
+            <div class="form-group">
+                    <label>Address <i class="fa fa-address-book" aria-hidden="true"></i></label><br>
+                    <textarea class = "textInput"  name="address"  formControlName="address" class="form-control" [(ngModel)] = "address_key" ></textarea>
+
+            </div>
+            <div class="form-group text-center">
+                    <button type="button" class="btn btn-primary" (click)="onSubmit()" >Register</button><br><br>
+                    <label for="btn">Already a User??</label><br>
+                    <a routerLink = '/login' class="text-info">Login here</a>
+            </div>
+        </form>
+        <!-- <div>
+          <form action="/MyPosts/register" method="POST">
+          <input type="text" [(ngModel)] = "fname" >
+          <input type="hidden" [(ngModel)] = "lname" >
+          <input type="hidden" [(ngModel)] = "myemail" >
+          <input type="hidden" [(ngModel)] = "mymobile" >
+          <input type="hidden" [(ngModel)] = "mypassword" >
+          <input type="hidden" [(ngModel)] = "myloginstatus" >
+          <input type="hidden" [(ngModel)] = "myaddress" >
+          <input type="hidden" [(ngModel)] = "myoffers" >
+          <input type="hidden" [(ngModel)] = "myorders" >
+          <input type="hidden" [(ngModel)] = "mycart" >
+          <input type="submit" id='sos' value="submitww">
+          <button type="submit" id='sos'></button>
+          <input type="submit" value="Add Name">
+          </form>
+        </div> -->
+    </div>
+
+

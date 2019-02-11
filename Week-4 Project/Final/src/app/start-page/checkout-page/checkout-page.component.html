@@ -1,0 +1,97 @@
+<div class = "row">
+  <app-topnavbar-page></app-topnavbar-page>
+</div>
+<div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-12">
+        
+        <h3>Shipping Address</h3>
+        <div class="list-group">
+          <div class="list-group-item">
+            <div class="list-group-item-heading">          
+                <div class="row radio">
+                  <div class="col-xs-3">
+                    <label>
+                      <input type="radio" name="optionShipp" id="optionShipp1" value="option1">
+                      Old Address
+                    </label>
+                  </div>
+                  <div class="col-xs-5">{{add}}
+                    <!-- <dl class="dl-small">
+                      <dt>Miguel Perez</dt>
+                      <dd>1509 Latona St, Philadelphia, PA 19146 </dd>
+                    </dl> -->
+                    <!-- <button class="btn btn-sm">Edit</button>
+                    <button class="btn btn-sm btn-link">Delete this address</button> -->
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="list-group-item">
+            <div class="list-group-item-heading">          
+                <div class="row">
+                  <div class="col-xs-3">
+                    <div class="radio">
+                      <label>
+                        
+                        New address
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-xs-9">                      
+                    <form role="form" class="">
+                      <textarea [(ngModel)] = "newaddress" name = "textar"></textarea>
+                    </form>
+                    <button class="btn btn-sm" (click) = "saveaddress()">Save Address</button>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div> 
+          <h1> Final Amount :  &#8377;{{totalamount}}</h1>
+        </div>
+        <div class="checkbox">
+            <label data-toggle="collapse" data-target="#promo">
+              <input type="checkbox"> I have a promo code
+            </label>
+          </div>
+          <div class="collapse" id="promo">
+
+            <div class="form-group" id="promobox" style="Display:block">
+              <label for="inputpromo" class="control-label">Promo Code</label>
+              <div class="form-inline" >
+                <input type="text" [(ngModel)] = "off"  class="form-control" id="inputpromo" placeholder="Enter promo code">
+                <button (click)="offer()" class="btn btn-sm">Apply</button>
+              </div>
+            </div>
+
+          </div>
+        <h3>I'll pay with&hellip;</h3>
+        <div class="list-group">
+          <div class="list-group-item">
+            <div class="list-group-item-heading">          
+                <div class="row radio">
+                  <div class="col-xs-3">
+                    <label data-toggl-e="collapse" data-target="#newcard">
+                      <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" required>
+                      COD
+                    </label>
+                  </div>
+                  <div class="col-xs-9">                      
+                    <div class="media">
+                      <div class="media-body" id="newcard">
+                        Payment at the time of Delivery.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="well">
+          <button type="button" class="btn btn-primary btn-lg btn-block" (click) = "placeorder()">Place Order</button>
+        </div>
+      </div>
+    </div>
+  </div>

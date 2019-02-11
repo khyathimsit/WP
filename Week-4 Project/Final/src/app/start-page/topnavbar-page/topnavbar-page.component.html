@@ -1,0 +1,78 @@
+<nav class="navbar navbar-inverse topnav2 responsive" *ngIf = "user">
+  <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <!-- <a class="navbar-brand active" href="#">Logo</a> -->
+        <a class="navbar-brand active" href="#">AMAZE-KART</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <!-- <li class="active"><a href="#">Home</a></li> -->
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Select By Category <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a routerLink = '/searchpage/l'>Laptops</a></li>
+              <li><a routerLink = '/searchpage/mo'>Mobiles</a></li>
+              <li><a routerLink = '/searchpage/g' >Goggles</a></li>
+              <li><a routerLink = '/searchpage/wa'>Watches</a></li>
+              <li><a routerLink = '/searchpage/mp'>Men's Pants</a></li>
+              <li><a routerLink = '/searchpage/ms'>Men's Shirts</a></li>
+              <li><a routerLink = '/searchpage/wp'>Women's Pants</a></li>
+              <li><a routerLink = '/searchpage/ws'>Women's Shirts</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a routerLink = "/startpage" (click) = "logout()"><i class="fas fa-sign-out-alt"></i> LogOut</a></li>
+            <li><a routerLink = "/cart"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+        </ul>
+      </div>
+    </div>
+    <br>
+  <br>
+</nav>
+
+
+
+<nav class="navbar navbar-inverse topnav2 responsive" *ngIf = "!user">
+  <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <!-- <a class="navbar-brand active" href="#">Logo</a> -->
+        <a class="navbar-brand active" href="#">AMAZE-KART</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <!-- <li class="active"><a href="#">Home</a></li> -->
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Select By Category <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a routerLink = '/searchpage/l'>Laptops</a></li>
+              <li><a routerLink = '/searchpage/mo'>Mobiles</a></li>
+              <li><a routerLink = '/searchpage/g' >Goggles</a></li>
+              <li><a routerLink = '/searchpage/wa'>Watches</a></li>
+              <li><a routerLink = '/searchpage/mp'>Men's Pants</a></li>
+              <li><a routerLink = '/searchpage/ms'>Men's Shirts</a></li>
+              <li><a routerLink = '/searchpage/wp'>Women's Pants</a></li>
+              <li><a routerLink = '/searchpage/ws'>Women's Shirts</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a routerLink = "/register"> <i class="fas fa-user-plus"></i> SignUp</a></li>
+            <li><a routerLink = "/login"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+            <li><a routerLink = "/cart"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+        </ul>
+      </div>
+    </div>
+    <br>
+  <br>
+</nav>
